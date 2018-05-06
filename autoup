@@ -87,8 +87,8 @@ fi
 refresh
 
 if [ ! $local = $base ]; then
-	git pull --recurse-submodules -q
-	#git submodule foreach --recursive git fetch && git submodule foreach git pull origin master
+	git submodule foreach --recursive git fetch >> /dev/null 2>&1
+	git submodule foreach git pull origin master >> /dev/null 2>&1
 	refresh
 	if [ ! $local = $base ]; then
 		#ERROR: Repo still outdated
