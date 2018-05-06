@@ -76,6 +76,7 @@ getScriptArgs
 
 checkTimeStamp
 
+#This repo is designed to be a submodule
 cd ..
 
 #Test if it's a valid git repo
