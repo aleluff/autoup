@@ -87,7 +87,7 @@ fi
 refresh
 
 if [ ! $local = $base ]; then
-	git pull -q
+	git pull --recurse-submodules -q
 	refresh
 	if [ ! $local = $base ]; then
 		#ERROR: Repo still outdated
