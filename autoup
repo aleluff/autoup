@@ -78,7 +78,7 @@ checkTimeStamp
 
 #This repo is designed to be a submodule
 cd ..
-
+echo 't';
 #Test if it's a valid git repo
 if [[ ! -d .git || $(git rev-list --all --count) == 0 ]]; then
 	ex 0;
