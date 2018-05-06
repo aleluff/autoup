@@ -85,7 +85,7 @@ if [[ ! -d .git || $(git rev-list --all --count) == 0 ]]; then
 fi
 
 refresh
-
+echo 'l';
 if [ ! $local = $base ]; then
 	git pull --recurse-submodules -q
 	refresh
