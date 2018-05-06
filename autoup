@@ -85,9 +85,10 @@ if [[ ! -d .git || $(git rev-list --all --count) == 0 ]]; then
 fi
 
 refresh
-echi 'f';
+
 if [ ! $local = $base ]; then
 	git pull --recurse-submodules -q
+	#git submodule foreach --recursive git fetch && git submodule foreach git pull origin master
 	refresh
 	if [ ! $local = $base ]; then
 		#ERROR: Repo still outdated
