@@ -3,7 +3,8 @@
 Code Auto Update
 ===========================
 
-The script doesn't update itself so there is no backdoor possible
+This script was designed to be call by bash script, and recall it after pulling repo with same arguments.
+Typically, if you have scripts that must be up-to-date on run, implement autoup in each of them
 
 # Usage
 
@@ -24,8 +25,10 @@ wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && chmod +x 
 rm autoup.on
 ```
 
-
 There is a good example in [https://github.com/usbkey9/uktools/](https://github.com/usbkey9/uktools/blob/master/setup#L23) 
+
+## Disclaimer
+The script doesn't update itself so there is no backdoor possible
 
 ## TODO (Tests)
 
