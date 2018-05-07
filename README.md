@@ -1,19 +1,27 @@
 ![Project Status: Active][Project Status Image]
 
-AutoUp
+Code Auto Update
 ===========================
 
-**Auto Update**
-This repo implement auto-update, which means that it'll automatically get last available github's version when using "normal setup"
+The script doesn't update itself so there is no backdoor possible
 
------------------------------------------
+#Usage
 
-AutoUp update top-level repo and submodules
+* Download script and activate it
+``` 
+wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && touch autoup.on
+```
 
-If you modify file manage by git, this script will will not override and so don't update repo
+* Call it from all your callable bash script
 
+```
+./autoup $0 $@
+```
 
 ## TODO (Tests)
-* check if auto-update works well when current repo is outdated by running normal script (setup, ukupgrade, ukpurge) which update to last gihub version
 
-### Any other contributions is welcome (trad, display, etc)
+* It doesn't support subrepo/submodule for now (external help is welcome)
+* Any other contributions is welcome
+
+
+[Project Status Image]: https://img.shields.io/badge/project-active-green.svg "Project Status: Active"
