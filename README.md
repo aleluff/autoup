@@ -18,6 +18,8 @@ wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && touch aut
 ./autoup $0 $@
 ```
 
+There is a good example in [https://github.com/usbkey9/uktools/](https://github.com/usbkey9/uktools/) 
+
 ## TODO (Tests)
 
 * It doesn't support subrepo/submodule for now (external help is welcome)
