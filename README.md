@@ -5,7 +5,7 @@ Code Auto Update
 
 The script doesn't update itself so there is no backdoor possible
 
-#Usage
+# Usage
 
 * Download script and activate it
 ``` 
@@ -17,6 +17,13 @@ wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && touch aut
 ```
 ./autoup $0 $@
 ```
+
+* If you want to disable it
+
+```
+rm autoup.on
+```
+
 
 There is a good example in [https://github.com/usbkey9/uktools/](https://github.com/usbkey9/uktools/) 
 
