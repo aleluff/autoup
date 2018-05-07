@@ -12,7 +12,7 @@ The script doesn't update itself so there is no backdoor possible
 wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && chmod +x autoup && touch autoup.on
 ```
 
-* Call it from all your callable bash script
+* Call it from all your callable bash script (preferably in the early)
 
 ```
 ./autoup $0 $@
@@ -25,7 +25,7 @@ rm autoup.on
 ```
 
 
-There is a good example in [https://github.com/usbkey9/uktools/](https://github.com/usbkey9/uktools/) 
+There is a good example in [https://github.com/usbkey9/uktools/](https://github.com/usbkey9/uktools/blob/master/setup#L23) 
 
 ## TODO (Tests)
 
