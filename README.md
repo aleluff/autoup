@@ -7,9 +7,9 @@ The script doesn't update itself so there is no backdoor possible
 
 # Usage
 
-* Download script and activate it
+* Download script, set exec permission and activate it
 ``` 
-wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && touch autoup.on
+wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && chmod +x autoup && touch autoup.on
 ```
 
 * Call it from all your callable bash script
