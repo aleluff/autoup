@@ -10,7 +10,7 @@ Typically, if you have scripts that must be up-to-date on run, implement autoup 
 
 * Download script, set exec permission
 ``` 
-wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && chmod +x autoup && touch autoup.on
+wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && chmod +x autoup
 ```
 
 * Activate it
