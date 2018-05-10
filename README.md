@@ -3,8 +3,8 @@
 Code Auto Update
 ===========================
 
-This script was designed to be call by bash script, and recall it after pulling repo with same arguments.
-Typically, if you have scripts that must be up-to-date on run, implement autoup in each of them
+This script was designed to be call by bash script, and recall it after pulling repo with same arguments<br>
+Typically, if you have scripts that must be up-to-date on run, implement autoup in each of them<br>
 Don't worry if your scripts call between them, there is a delay of 1 hour between possible pull (disable in debug)
 
 # Usage
