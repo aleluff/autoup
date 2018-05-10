@@ -87,12 +87,16 @@ fi
 refresh
 
 if [ ! $local = $base ]; then
+	echo
+	echo "Code Updating...";
 	git pull -q
 	refresh
 	if [ ! $local = $base ]; then
 		#ERROR: Repo still outdated
 		ex 2;
 	else
+		echo
+		echo "Code Successfully Updated";
 		#Repo successfully updated
 		ex 1;
 	fi
