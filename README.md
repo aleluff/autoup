@@ -19,11 +19,12 @@ wget https://raw.githubusercontent.com/usbkey9/autoup/master/autoup && chmod +x 
 touch autoup.on
 ```
 
-* Call it from all your callable bash script (preferably in the early)
+* Call it from all your callable bash script (preferably in the early) with PID
 
 ```
-./autoup $0 $@
+./autoup $$
 ```
+You can replace `$$` with your process id if you call autoup from non-bash
 
 * If you want to disable it
 
