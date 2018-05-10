@@ -32,20 +32,25 @@ function getScriptArgs() {
 	fi
 }
 
-function ex(){
+#Continue normal execution (not a git repo or up-to-date)
+function normalEx(){
 
-	if [[ $1 = 0 ]]; then
-		#Continue normal execution (not a git repo or up-to-date)
-		exit;
-	elif [[ $1 = 1 ]]; then
-		#Need to reload script;
-		${BASH_ARGV[0]} ${args[@]};
-		echo;
-		pkill -f ${BASH_ARGV[0]};
-	elif [[ $gitup = 2 ]]; then
-		echo "Error while git auto-update. Exiting Now!";
-		exit;
-	fi
+	exit;
+}
+
+#Success up, need to reload script;
+function reloadEx(){
+
+	${BASH_ARGV[0]} ${args[@]};
+	echo;
+	pkill -f ${BASH_ARGV[0]};
+}
+
+#All is in the name
+function errorEx(){
+
+	echo "Error while git auto-update. Exiting Now!";
+	exit;
 }
 
 function checkTimeStamp() {
@@ -58,7 +63,7 @@ function checkTimeStamp() {
 
 	if [[ $fileTs > $ts ]]; then
 		#Consider as up-to-date (useful when call multiple time by other script)
-		ex 0;
+		normalEx
 	else
 		echo $ts > $file
 	fi
@@ -81,7 +86,7 @@ if [[ ! -f ./autoup.debug ]]; then checkTimeStamp; fi
 
 #Test if it's a valid git repo
 if [[ ! -d .git || $(git rev-list --all --count) == 0 ]]; then
-	ex 0;
+	normalEx
 fi
 
 refresh
@@ -93,14 +98,14 @@ if [ ! $local = $base ]; then
 	refresh
 	if [ ! $local = $base ]; then
 		#ERROR: Repo still outdated
-		ex 2;
+		errorEx
 	else
 		echo
 		echo "Code Successfully Updated";
 		#Repo successfully updated
-		ex 1;
+		reloadEx
 	fi
 fi
 
 #Repo up-to-date
-ex 0;
+normalEx
