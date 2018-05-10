@@ -5,6 +5,7 @@ Code Auto Update
 
 This script was designed to be call by bash script, and recall it after pulling repo with same arguments.
 Typically, if you have scripts that must be up-to-date on run, implement autoup in each of them
+Don't worry if your scripts call between them, there is a delay of 1 hour between possible pull (disable in debug)
 
 # Usage
 
@@ -28,6 +29,12 @@ touch autoup.on
 
 ```
 rm autoup.on
+```
+
+* Debug (will desactivate 1 hour delay)
+
+```
+touch autoup.debug
 ```
 
 There is a good example in [https://github.com/usbkey9/uktools/](https://github.com/usbkey9/uktools/blob/master/setup#L23) 
