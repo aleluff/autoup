@@ -72,7 +72,7 @@ function refresh() {
 
 function checkPass() {
 
-	echo "User: $userName";
+	echo "User for Git Update: $userName";
 	try=0;
 	test=$(su $userName -c "echo 1");
 
