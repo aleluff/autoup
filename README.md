@@ -32,7 +32,7 @@ You can replace `$$` with your process id if you call autoup from non-bash
 rm autoup.on
 ```
 
-* Debug (will desactivate 1 hour delay)
+* Debug (will always update repo and enable verbose)
 
 ```
 touch autoup.debug
