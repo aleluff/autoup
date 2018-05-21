@@ -112,4 +112,5 @@ if ! isRepoUp; then
 fi
 
 #Repo up-to-date
+if [[ -f ./autoup.debug ]]; then echo "Already Up To Date"; fi
 normalEx
