@@ -42,6 +42,7 @@ There is a good example in [https://github.com/usbkey9/uktools/](https://github.
 
 ## Disclaimer
 The script doesn't update itself so there is no backdoor possible
+If you use SSH key for git auth in your repo: avoid using cronjob !!!
 
 ## TODO (Tests)
 
