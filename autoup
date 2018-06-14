@@ -3,10 +3,12 @@
 # @author Usb Key
 # @mail usbkey9@gmail.com
 
-#This script auto update current repo
-#It's designed to recall script in parameter with same arguments after updating
-#It has been develop to be call by every directly callable script
-#It prevent to be execute too many times so don't worry if yours scripts call themselves
+# This script auto update current repo
+# It has been designed for "utilities repositories" aka repo with few/no collaboration and must be kept up-to-date
+# I use it in https://github.com/usbkey9/uktools
+
+# You have to call this script in each of yours directly callable script
+# It prevent to be execute too many times so don't worry if yours scripts call themselves
 
 #Follow symlink and cd to right directory
 SOURCE="${BASH_SOURCE[0]}"
