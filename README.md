@@ -3,9 +3,13 @@
 Code Auto Update
 ===========================
 
-This script was designed to be call by bash script, and recall it after pulling repo with same arguments<br>
-Typically, if you have scripts that must be up-to-date on run, implement autoup in each of them<br>
-Don't worry if your scripts call between them, there is a delay of 1 hour between possible pull (disable in debug)
+It has been designed for "utilities repositories" aka repo with few/no collaboration and must be kept up-to-date<br>
+I use it in https://github.com/usbkey9/uktools
+
+It works like a master-slave replication where git upstream is the master and clones are the slaves
+
+You have to call this script in each of yours directly callable script<br>
+Don't worry if your scripts call between them, there is a delay of 1 hour between pulls
 
 # Usage
 
