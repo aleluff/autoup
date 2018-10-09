@@ -46,6 +46,7 @@ There is a good example in [https://github.com/usbkey9/uktools/](https://github.
 
 ## Disclaimer
 
+* Please avoid git rebase, this script doesn't reset to HEAD, so there can have conflits if
 * When debug off, if your repo don't need update, nothing will be prompt
 * The script doesn't update itself so there is no backdoor possible
 * If you use SSH key for git auth in your repo: avoid using non-X-session for running autoup

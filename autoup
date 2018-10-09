@@ -7,6 +7,8 @@
 #It's designed to recall script in parameter with same arguments after updating
 #It has been develop to be call by every directly callable script
 #It prevent to be execute too many times so don't worry if yours scripts call themselves
+#Please avoid git rebase, this script doesn't reset to HEAD, so there can have conflits if
+
 
 #Follow symlink and cd to right directory
 SOURCE="${BASH_SOURCE[0]}"
