@@ -33,7 +33,7 @@ You can replace `$$` with your process id if you call autoup from non-bash
 * If you want to disable it
 
 ```
-rm autoup.on
+./autoup -unin
 ```
 
 * Debug (will always update repo and enable verbose)
